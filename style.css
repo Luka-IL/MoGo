@@ -416,8 +416,8 @@ h2::before {
     width: 45%
 }
 
-.abilities-image{
-    width:100%;
+.abilities-image {
+    width: 100%;
 }
 
 .abilities-list {
@@ -485,19 +485,19 @@ h2::before {
 .quotes {
     background-color: #f8f8f8;
     width: 100%;
-    margin-top:100px;
+    margin-top: 100px;
 }
 
 .quotes-item {
     width: 775px;
-    padding:70px 0 70px 325px;
+    padding: 70px 0 70px 325px;
     font-size: 24px;
     line-height: 36px;
     transition-duration: 1s;
     display: none;
 }
 
-.quotes-visibility{
+.quotes-visibility {
     display: block;
 }
 
@@ -505,7 +505,7 @@ h2::before {
     position: relative;
 }
 
-.quotes .container{
+.quotes .container {
     position: relative;
 }
 
@@ -521,7 +521,7 @@ h2::before {
     top: 10px;
 }
 
-.quotes .container::before{
+.quotes .container::before {
     content: '';
     position: absolute;
     border: solid #cccccc;
@@ -533,7 +533,7 @@ h2::before {
     right: 2%;
 }
 
-.quotes .container::after{
+.quotes .container::after {
     content: '';
     position: absolute;
     border: solid #cccccc;
@@ -545,28 +545,61 @@ h2::before {
     left: 2%;
 }
 
-.team-first-title{
-    margin-top:95px;
+.team-first-title {
+    margin-top: 95px;
 }
 
-.team-info{
+.team-info {
     margin: 80px auto 90px auto;
-    width:85%;
+    width: 85%;
+    text-align: center;
 }
 
-.team-group{
+.team-group {
     display: flex;
 }
 
-.team-photo{
-    width:33%;
+.team-photo {
+    width: 33%;
+    margin-right: 30px;
     text-align: center;
-    overflow: hidden;
 }
 
-.team-image{
-    width:100%;
+.team-image {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.team-image::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: black;
+}
+
+.team-image:hover {
+    transform: translate(-8px, -8px);
+    box-shadow: 8px 8px 0px 1px #95e1d3;
+    opacity: 0.5;
+    background-color: black;
+}
+
+.team-caption {
+    margin-top: 25px;
+}
+
+.team-name {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.team-position {
+    color: #999;
+}
+
+.company .container{
+    display:flex;
 }
