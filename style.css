@@ -475,15 +475,11 @@ h2::before {
     display: none;
     border-top: 1px solid #e5e5e5;
     transition-duration: 0.7s;
-    height: 0;
-    overflow: hidden;
 }
 
 .hidden {
     display: block;
-    height: 20%;
     padding: 20px 30px 20px 20px;
-    transition-duration: 1s;
 }
 
 .quotes {
@@ -547,4 +543,30 @@ h2::before {
     transform: rotate(-225deg);
     top: 50%;
     left: 2%;
+}
+
+.team-first-title{
+    margin-top:95px;
+}
+
+.team-info{
+    margin: 80px auto 90px auto;
+    width:85%;
+}
+
+.team-group{
+    display: flex;
+}
+
+.team-photo{
+    width:33%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.team-image{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
