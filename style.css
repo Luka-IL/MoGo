@@ -474,7 +474,7 @@ h2::before {
 .ability-item-info {
     display: none;
     border-top: 1px solid #e5e5e5;
-    transition-duration: 0.7s;
+    transition-duration: translate 0.7s;
 }
 
 .hidden {
@@ -488,24 +488,35 @@ h2::before {
     margin-top: 100px;
 }
 
+.quotes-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.quotes-item-group {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
 .quotes-item {
     width: 775px;
     padding: 70px 0 70px 325px;
     font-size: 24px;
     line-height: 36px;
     transition-duration: 1s;
-    display: none;
+    position: absolute;
+    transform: translateX(-1200px)
 }
 
 .quotes-visibility {
-    display: block;
+    position: static;
+    transform: translateX(0px)
 }
 
 .quotes-info {
-    position: relative;
-}
-
-.quotes .container {
     position: relative;
 }
 
@@ -521,7 +532,7 @@ h2::before {
     top: 10px;
 }
 
-.quotes .container::before {
+.quotes-right-btn {
     content: '';
     position: absolute;
     border: solid #cccccc;
@@ -531,9 +542,16 @@ h2::before {
     transform: rotate(-45deg);
     top: 50%;
     right: 2%;
+    outline: none;
+    background-color: #f8f8f8;
+    z-index: 1;
 }
 
-.quotes .container::after {
+.quotes-right-btn:hover {
+    opacity: 0.8
+}
+
+.quotes-left-btn {
     content: '';
     position: absolute;
     border: solid #cccccc;
@@ -543,6 +561,61 @@ h2::before {
     transform: rotate(-225deg);
     top: 50%;
     left: 2%;
+    outline: none;
+    background-color: #f8f8f8;
+    z-index: 1;
+}
+
+@media screen and (max-width:1100px) {
+    .quotes-container {
+        max-width: 800px;
+    }
+
+    .quotes-item {
+        font-size: 20px;
+        width: 70%;
+        padding: 40px 0 40px 225px;
+        line-height: 26px;
+    }
+    .quotes-info::after{
+        transform: scale(0.7);
+        left: -31%;
+        top: -10px;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .quotes-container {
+        max-width: 550px;
+    }
+
+    .quotes-item {
+        font-size: 16px;
+        padding: 20px 0 20px 140px;
+        line-height: 22px;
+    }
+    .quotes-info::after{
+        transform: scale(0.5);
+        top: -25px;
+        left: -35%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .quotes-container {
+        max-width: 360px;
+    }
+
+    .quotes-item {
+        font-size: 12px;
+        padding: 15px 0 15px 95px;
+        line-height: 14px;
+    }
+    .quotes-info::after{
+        transform: scale(0.3);
+        top: -25px;
+        left: -49%;
+    }
 }
 
 .team-first-title {
@@ -570,20 +643,13 @@ h2::before {
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-.team-image::after{
-    content: '';
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    background-color: black;
+    transition-duration: 0.5s;
 }
 
 .team-image:hover {
     transform: translate(-8px, -8px);
     box-shadow: 8px 8px 0px 1px #95e1d3;
-    opacity: 0.5;
+    opacity: 0.8;
     background-color: black;
 }
 
@@ -600,6 +666,16 @@ h2::before {
     color: #999;
 }
 
-.company .container{
-    display:flex;
+.company {
+    margin-top: 150px;
+    background-color: #f8f8f8
+}
+
+.company .container {
+    display: flex;
+    padding: 45px 0 45px 0;
+}
+
+.company-image {
+    width: 50%;
 }
