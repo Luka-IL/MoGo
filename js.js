@@ -53,16 +53,7 @@ function prevBtn() {
 }
 
 function displayBtn(){
-if (numCurrent == 0) {
-    btnLeft.style.display ='none'
-} else {
-    btnLeft.style.display ='block'
-};
-    
-if (numCurrent == 2) {
-    btnRight.style.display ='none'
-} else {
-    btnRight.style.display ='block'
-}
+(numCurrent == 0) ? (btnLeft.style.display ='none') : (btnLeft.style.display ='block');   
+(numCurrent == 2) ? (btnRight.style.display ='none') : (btnRight.style.display ='block')
 }
 
