@@ -679,3 +679,27 @@ h2::before {
 .company-image {
     width: 50%;
 }
+
+.collage-info{
+    margin: 80px auto 100px auto;
+    width:85%;
+}
+
+.collage-pictures{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.collage-image {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.collage-item-3{
+    grid-column-start:3;
+    grid-row-start: 1;
+    grid-row-end:3;
+}
