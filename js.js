@@ -38,15 +38,15 @@ btnLeft.addEventListener('click', prevBtn)
 displayBtn()
 
 function nextBtn() {
-    quotes[numCurrent].style.transform = "translateX(" + size + "px)";
+    quotes[numCurrent].style.transform = "translateX(" + -size + "px)";
     quotes[numCurrent+1].style.transform = "translateX(0px)";
-    console.log(numCurrent)
+    console.log(numCurrent);
     numCurrent++;
     displayBtn();
 }
 
 function prevBtn() {
-    quotes[numCurrent].style.transform = "translateX(" + -size + "px)";
+    quotes[numCurrent].style.transform = "translateX(" + size + "px)";
     quotes[numCurrent-1].style.transform = "translateX(0px)";
     numCurrent--;
     displayBtn();
@@ -57,3 +57,36 @@ function displayBtn(){
 (numCurrent == 2) ? (btnRight.style.display ='none') : (btnRight.style.display ='block')
 }
 
+//Translate collage 
+
+let comment = document.querySelectorAll('.collage-comment')
+let btnCollageRight = document.querySelector('.collage-right-btn')
+let btnCollageLeft = document.querySelector('.collage-left-btn')
+let numCollage = 0;
+let widthCollage = document.querySelector('.collage-container')
+let sizeCollage = widthCollage.clientWidth
+
+displayCollageBtn()
+
+btnCollageRight.addEventListener('click', nextCollageBtn);
+btnCollageLeft.addEventListener('click', prevCollageBtn)
+
+function nextCollageBtn() {
+    comment[numCollage].style.transform = "translateX(" + -sizeCollage + "px)";
+    comment[numCollage+1].style.transform = "translateX(0px)";
+    console.log(numCollage);
+    numCollage++;
+    displayCollageBtn();
+}
+
+function prevCollageBtn() {
+    comment[numCollage].style.transform = "translateX(" + sizeCollage + "px)";
+    comment[numCollage-1].style.transform = "translateX(0px)";
+    numCollage--;
+    displayCollageBtn();
+}
+
+function displayCollageBtn(){
+(numCollage == 0) ? (btnCollageLeft.style.display ='none') : (btnCollageLeft.style.display ='block');   
+(numCollage == 2) ? (btnCollageRight.style.display ='none') : (btnCollageRight.style.display ='block')
+}
