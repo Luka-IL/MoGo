@@ -9,8 +9,12 @@ let massAbility = []
 
 function saturn(e) {
     let num = massAbility.indexOf(this);
+    if (info[num].classList.contains('hidden')) {
+        info[num].classList.remove('hidden')
+    } else {
     removeClass(info, 'hidden');
-    info[num].classList.add('hidden');
+    info[num].classList.add('hidden')
+    };
 }
 
 function removeClass(massiv, className) {
@@ -40,7 +44,6 @@ displayBtn()
 function nextBtn() {
     quotes[numCurrent].style.transform = "translateX(" + -size + "px)";
     quotes[numCurrent+1].style.transform = "translateX(0px)";
-    console.log(numCurrent);
     numCurrent++;
     displayBtn();
 }
@@ -74,7 +77,6 @@ btnCollageLeft.addEventListener('click', prevCollageBtn)
 function nextCollageBtn() {
     comment[numCollage].style.transform = "translateX(" + -sizeCollage + "px)";
     comment[numCollage+1].style.transform = "translateX(0px)";
-    console.log(numCollage);
     numCollage++;
     displayCollageBtn();
 }

@@ -10,7 +10,14 @@ body {
     box-sizing: border-box;
     line-height: 24px;
     color: #999999;
+}
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -428,8 +435,8 @@ h2::before {
 .ability-item {
     border: 1px solid #e5e5e5;
     margin-bottom: 10px;
-    /*Use one class*/
     position: relative;
+    cursor: pointer;
 }
 
 .ability-item::before {
@@ -545,6 +552,7 @@ h2::before {
     outline: none;
     background-color: #f8f8f8;
     z-index: 1;
+    cursor: pointer;
 }
 
 .quotes-right-btn:hover {
@@ -564,6 +572,7 @@ h2::before {
     outline: none;
     background-color: #f8f8f8;
     z-index: 1;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1100px) {
@@ -849,7 +858,7 @@ h2::before {
     position: absolute;
     width: 60px;
     height: 50px;
-    padding-top:20px;
+    padding-top: 20px;
     background-color: #95e1d3;
     z-index: 1;
     text-align: center;
@@ -857,12 +866,12 @@ h2::before {
     font-weight: 700;
     line-height: 18px;
     color: white;
-    top:160px;
-    left:-10px;
+    top: 160px;
+    left: -10px;
 }
 
-.blog-post-date span{
-    font-size:14px;
+.blog-post-date span {
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -878,36 +887,183 @@ h2::before {
     padding-bottom: 20px
 }
 
-.blog-post-statistics{
-    margin-top:20px;
+.blog-post-statistics {
+    margin-top: 20px;
 }
 
-.post-number-view{
+.post-number-view {
     position: relative;
-    padding-left:30px;
+    padding-left: 30px;
 }
 
-.post-number-view::after{
-    content:'';
-    width:20px;
+.post-number-view::after {
+    content: '';
+    width: 20px;
     height: 11px;
     position: absolute;
     background: url('img/eye.png');
     top: 2px;
-    left:4px;
+    left: 4px;
 }
 
-.post-number-comment{
-    position:relative;
-    margin-left:40px;
+.post-number-comment {
+    position: relative;
+    margin-left: 40px;
 }
 
-.post-number-comment::after{
-    content:'';
-    width:16px;
+.post-number-comment::after {
+    content: '';
+    width: 16px;
     height: 16px;
     position: absolute;
     background: url('img/cloud.png');
     top: 0px;
-    left:-22px;
+    left: -22px;
+}
+
+.footer {
+    background-color: rgba(248, 248, 248);
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(209, 209, 209, 0.7);
+}
+
+.footer-mogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-mogo-logo {
+    color: rgba(209, 209, 209);
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+.footer-mogo-info {
+    margin-top: 30px;
+}
+
+.mogo-followers {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.mogo-followers::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    margin-top: 10px;
+    background-color: rgba(209, 209, 209);
+}
+
+.mogo-followers span {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.65)
+}
+
+.mogo-social {
+    margin-top: 10px;
+}
+
+.mogo-social::after {
+    content: '';
+    display: inline-block;
+    width: 228px;
+    height: 21px;
+    margin-left: 10px;
+    margin-bottom: -3px;
+    background-image: url(img/social.png);
+    cursor: pointer;
+}
+
+.mogo-email {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.mogo-email-input {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgba(209, 209, 209);
+}
+
+.mogo-email-input:active,
+.mogo-email-input:focus{
+    outline: none;
+}
+
+.mogo-email-input::placeholder {
+    color: rgba(209, 209, 209, 0.7);
+}
+
+.mogo-email-btn {
+    padding: 10px 20px;
+    background-color: #95e1d3;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-blogs-title {
+    text-transform: uppercase;
+    color: black;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.footer-blogs-group {
+    margin-left: 25px;
+}
+
+.footer-blogs-item {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.footer-blogs-image {
+    margin-right: 15px;
+}
+
+.footer-blogs-text {
+	text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+}
+.footer-blogs-date{
+    font-size: 12px;
+}
+
+.footer-instagram{
+    margin-left:25px;
+}
+
+.footer-instagram-title {
+    text-transform: uppercase;
+    color: black;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.footer-instagram-link {
+    display: block;
+    margin-top: 10px;
+    color: rgba(200, 200, 200);
+}
+
+.footer-copyright {
+    margin: 10px 0;
+	text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color:black;
 }
